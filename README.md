@@ -12,6 +12,6 @@
 * Also includes some information about Chinese Martial Arts, e.g. Bajiquan,Tai Chi, Piguaquan...
 
 
-###The js I have used:
+###JaveScript I have used:
 
 [bxSlider 4.2.3](http://bxslider.com)

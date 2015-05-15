@@ -7,6 +7,26 @@
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+		<!-- Google Map -->
+		<script>
+	    	$(document).bind("mobileinit", function () {
+	    		$.mobile.ajaxEnabled = false;
+	    	});
+
+	    	$(Start);
+
+	    	function Start() {
+	    	    $(".ui-collapsible-heading").click(function () {
+	    		    var latlng = new google.maps.LatLng(24.181466, 120.646863);
+	    		    var myOptions = { zoom: 16, center: latlng, mapTypeId: google.maps.MapTypeId.ROADMAP };
+	    		    var map = new google.maps.Map(document.getElementById("googleMap"), myOptions);
+	    		    var marker = new google.maps.Marker({ position: latlng, title: "My Google Map" });
+
+	    		    marker.setMap(map);
+	    		});
+	    	}
+	    </script>
 	</head>
 	<body>
 		<div data-role="page">
@@ -19,51 +39,54 @@
 				<p id="main">
 					Sample Text Here!
 				</p>
-				<div data-role="collapsible">
-					<h3>About us</h3>
-					<p>
-						We are Chan Hai Martial Arts Club...
-						創立於西元很久很久以前, 在下雨還不會導致地震發生的溫馨年代
-					</p>
-				</div>
-				<div data-role="collapsible">
-					<h3>Story</h3>
-					<p>
-						將近五十年的社團，爹親娘親逢甲親 <br>
-						身為一個快跟學校一樣老的社團，社史通校史，去校史館看看吧
-					</p>
-				</div>
-				<div data-role="collapsible">
-					<h3>What we teach</h3>
-					<p>
-						WuXi Finger Hold！<br>
-						<br>
-						<a href="slidesindex_en.html">learn more?</a>
-					</p>
-				</div>
-				<div data-role="collapsible">
-					<h3>Activities</h3>
-					<p>
-						慶生會、社遊、期末聚餐、寒暑假集訓、縣市級甚至是全國性比賽 <br>
-						<a href="slidesindex_en.html">了解更多?</a>
-					</p>
-				</div>
-				<div data-role="collapsible">
-					<h3>When & Where to find us</h3>
-					<p>
-						逢甲大學學思樓前空地 <br>
-						每周一三四晚上六點
-					</p>
-				</div>
-				<div data-role="collapsible">
-					<h3>Gallery</h3>
-					<p>
-						You can read pictures here.
-					</p>
-				</div>
+				<div data-role="collapsible-set">
+					<div data-role="collapsible">
+						<h3>About us</h3>
+						<p>
+							We are Chan Hai Martial Arts Club...
+							創立於西元很久很久以前, 在下雨還不會導致地震發生的溫馨年代
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>Story</h3>
+						<p>
+							將近五十年的社團，爹親娘親逢甲親 <br>
+							身為一個快跟學校一樣老的社團，社史通校史，去校史館看看吧
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>What we teach</h3>
+						<p>
+							WuXi Finger Hold！<br>
+							<br>
+							<a href="slidesindex_en.html">learn more?</a>
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>Activities</h3>
+						<p>
+							慶生會、社遊、期末聚餐、寒暑假集訓、縣市級甚至是全國性比賽 <br>
+							<a href="slidesindex_en.html">learn more?</a>
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>Gallery</h3>
+						<p>
+							You can read pictures here.
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>When & Where to find us</h3>
+						<p>
+							逢甲大學學思樓前空地 <br>
+							Every Monday, Tuesday and Thursday 18:00
+						</p>
+						<div id="googleMap" style="width:100%; height:300px;"></div>
+					</div>
+				<div>
 			</div>
 			<div data-role="footer" data-position="fixed" data-theme="b">
-				<a href="index.html" data-role="button" data-icon="gear" class="ui-btn-left ui-corner-all ui-shadow" data-theme="b">Chinese</a>
+				<a href="index.html" data-role="button" data-icon="gear" class="ui-btn-left ui-corner-all ui-shadow" data-theme="b" data-ajax="false">Chinese</a>
 				<h4>&copy;倉海國術社</h4>
 				<a href="info_en.html" data-rel="dialog" data-role="button" data-icon="info" class="ui-btn-right ui-corner-all ui-shadow" data-theme="d">Contact us</a>
 			</div>

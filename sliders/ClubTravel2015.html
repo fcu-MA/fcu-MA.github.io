@@ -15,6 +15,7 @@
 		<link href="../bxslider/dist/jquery.bxslider.css" rel="stylesheet" />
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
 		<script>
+		/* Old version
 			$(document).ready(function() {
 				$('#ticker').bxSlider({
 				  minSlides: 3,
@@ -24,6 +25,14 @@
 				  ticker: true,
 				  speed: 10000
 				});
+			});
+		*/
+			$(document).ready(function() {
+				$('#ticker').bxSlider({
+					 auto: true,
+				 	 autoControls: true,
+				 	 pause: 2000
+				 	});
 			});
 		</script>
 	</head>

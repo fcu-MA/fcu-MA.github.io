@@ -1,9 +1,11 @@
 # fcu-MA.github.io
 ##A mobile website of FCU Chinese Martial Arts Club.
+##倉海國術社手機版網頁
 
-[DEMO: http://fcu-ma.github.io/m/index.html](http://fcu-ma.github.io/m/index.html)
+[DEMO](http://fcu-ma.github.io/m/index.html)
 
 ##What is this website exactly do?
+##這個網站在做些什麼？
 
 * Introduction of FCU Chinese Martial Arts Club
 * A mobile website for portable use

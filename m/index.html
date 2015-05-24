@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>FCU MA Club</title>
+		<title>倉海國術社 | FCU MA Club</title>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
@@ -27,12 +27,24 @@
 	    		});
 	    	}
 	    </script>
+	    <!-- Google  Analytics-->
+		<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-63336846-1', 'auto');
+			  ga('require', 'linkid', 'linkid.js');
+			  ga('send', 'pageview');
+
+		</script>
 	</head>
 	<body>
 		<div data-role="page">
 			<div data-role="header" data-theme="a">
 				<a href="#" data-role="button"data-icon="search" class="ui-btn-left" data-theme="a">搜尋</a>
-				<h1>首頁</h1>
+				<h1>倉海首頁</h1>
 				<a href="../index.html" data-role="button" data-icon="home" class="ui-btn-right" data-theme="a" data-ajax="false">網頁版</a>
 			</div>
 			<div data-role="content">
@@ -60,14 +72,14 @@
 							降龍十八掌？不教！
 							化骨棉掌？不教！<br>
 							我們教的是：八極拳、劈掛掌、螳螂拳....so on <br>
-							<a href="lessons.html" data-ajax="false">點這裡看看</a>
+							<a href="lessons.html" onClick="ga('send', 'event', 'category', 'action', 'label');" data-ajax="false">點這裡看看</a>
 						</p>
 					</div>
 					<div data-role="collapsible">
 						<h3>各種活動</h3>
 						<p>
 							慶生會、社遊、期末聚餐、寒暑假集訓、縣市級甚至是全國性比賽 <br>
-							<a href="activities.html" data-ajax="false">輕一點拜託><</a>
+							<a href="activities.html" onClick="ga('send', 'event', 'category', 'action', 'label');" data-ajax="false">輕一點拜託><</a>
 						</p>
 					</div>
 					<div data-role="collapsible">
@@ -75,7 +87,7 @@
 						<p>
 							各式活動、教學內容、社團環境介紹<br>
 							照片、影片、投影片籠底家<br>
-							<a href="gallery.html" data-transition="flip">了解更多</a>
+							<a href="gallery.html" onClick="ga('send', 'event', 'category', 'action', 'label');" data-transition="flip">了解更多</a>
 						</p>
 					</div>
 					<div data-role="collapsible" data-collapsed=true >
@@ -91,7 +103,8 @@
 			<div data-role="footer" data-position="fixed" data-theme="b">
 				<a href="index_en.html" data-role="button" data-icon="gear" class="ui-btn-left ui-corner-all ui-shadow" data-theme="b" data-ajax="false">English</a>
 				<h4>&copy;倉海國術社</h4>
-				<a href="info.html" data-rel="dialog" data-role="button" data-icon="info" class="ui-btn-right ui-corner-all ui-shadow" data-theme="d">聯絡我們</a>
+				<a href="info.html" onClick="ga('send', 'event', 'category', 'action', 'label');"
+					data-rel="dialog" data-role="button" data-icon="info" class="ui-btn-right ui-corner-all ui-shadow" data-theme="d">聯絡我們</a>
 			</div>
 		</div>
 	</body>
